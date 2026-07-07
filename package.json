@@ -2,7 +2,7 @@
   "name": "mousikaparamythia",
   "private": true,
   "scripts": {
-    "build": "nuxt generate && mkdir -p dist && cp -r .output/public/. dist",
+    "build": "nuxt generate",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "npx serve dist"
