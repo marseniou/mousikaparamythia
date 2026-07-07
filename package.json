@@ -2,11 +2,10 @@
   "name": "mousikaparamythia",
   "private": true,
   "scripts": {
-    "build": "nuxt build",
+    "build": "nuxt generate && cp -r .output/public dist",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "start": "node .output/server/index.mjs"
+    "preview": "npx serve dist"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",

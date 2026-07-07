@@ -33,7 +33,7 @@
 <script setup>
 import { useTheme } from "~/composables/useTheme";
 const { isNightMode } = useTheme();
-const { data: tales } = await useFetch("/api/tales");
+const tales = useTales();
 
 // A list of pastel colors for the cards
 const cardPastelColors = [
@@ -67,8 +67,8 @@ const getRandomGradient = () => {
 };
 
 const talesWithColors = computed(() => {
-  if (!tales.value) return [];
-  return tales.value.map((tale) => ({
+  if (!tales) return [];
+  return tales.map((tale) => ({
     ...tale,
     bgGradient: isNightMode.value ? "#1E293B" : getRandomGradient(),
   }));

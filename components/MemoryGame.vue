@@ -61,7 +61,7 @@
 <script setup>
 import { ref, onMounted } from "vue";
 
-const { data: tales } = await useFetch("/api/tales");
+const tales = useTales();
 
 const cards = ref([]);
 const flippedCards = ref([]);
@@ -78,9 +78,9 @@ const setupGame = () => {
   hasWon.value = false;
   flippedCards.value = [];
   clickCount.value = 0;
-  if (!tales.value) return;
+  if (!tales) return;
 
-  const gameTales = tales.value.slice(0, 12);
+  const gameTales = tales.slice(0, 12);
   const images = gameTales.map((tale) => tale.id);
 
   const gameImages = [...images, ...images, ...images];

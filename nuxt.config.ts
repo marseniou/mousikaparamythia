@@ -1,11 +1,40 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: false },
+  ssr: true,
   css: ['~/assets/css/animations.css'],
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxtjs/google-fonts'
   ],
+  generate: {
+    routes: [
+      '/', '/game',
+      '/giati-i-gata-kai-o-skulos-einai-ehthroi',
+      '/h-kamilopardali-kai-oi-pithikoi',
+      '/i-alepou-kai-o-korudallos',
+      '/i-istoria-tou-keraunou-kai-tis-vrontis',
+      '/i-koukouvagia-kai-i-perdika',
+      '/i-mahi-ton-kavourion',
+      '/liontari-lukos-kai-alepou',
+      '/o-fantasmenos-kokoras',
+      '/o-gaidaros-kai-i-lura',
+      '/o-ilios-to-feggari-ki-o-aeras-vgainoun-gia-deipno',
+      '/o-lagos-pou-fovotan',
+      '/o-laimargos-pontikos',
+      '/o-lukos-i-alepou-ki-o-gaidaros',
+      '/o-mulonas-kai-o-gatos-tou',
+      '/o-pithikos-pou-egine-vasilias',
+      '/o-vatrahos-kai-i-alepou',
+      '/pos-i-ma-mou-vrike-fagito-otan-peinouse',
+      '/to-ashimopapo',
+      '/to-asimenio-koudounaki',
+      '/to-kolpo-tou-gatou',
+      '/to-pathima-tou-lukou',
+      '/to-pio-gluko-psomi',
+      '/to-xriso-psaraki'
+    ]
+  },
   googleFonts: {
     families: {
       Roboto: [400, 700],
