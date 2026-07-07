@@ -7,13 +7,11 @@
     "generate": "nuxt generate",
     "preview": "npx serve dist"
   },
-  "devDependencies": {
+  "dependencies": {
     "@nuxt/devtools": "latest",
     "@nuxtjs/google-fonts": "^3.2.0",
     "@nuxtjs/tailwindcss": "^6.8.0",
-    "nuxt": "^3.7.4"
-  },
-  "dependencies": {
+    "nuxt": "^3.7.4",
     "date-fns-tz": "^3.2.0"
   }
 }
