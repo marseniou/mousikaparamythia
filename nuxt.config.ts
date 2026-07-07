@@ -3,6 +3,11 @@ export default defineNuxtConfig({
   devtools: { enabled: false },
   ssr: true,
   css: ['~/assets/css/animations.css'],
+  nitro: {
+    output: {
+      publicDir: 'dist'
+    }
+  },
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxtjs/google-fonts'
