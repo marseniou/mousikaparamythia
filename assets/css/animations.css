@@ -1,0 +1,23 @@
+@keyframes fall {
+  0% {
+    transform: translateY(-10vh) translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) translateX(var(--x-end, 0)) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.falling-shape {
+  position: absolute;
+  top: 0;
+  will-change: transform, opacity;
+  animation: fall 20s infinite linear;
+  z-index: 10;
+  color: rgba(255, 255, 255, 0.1);
+}
+
+.dark .falling-shape {
+  color: rgba(255, 255, 255, 0.05);
+}
