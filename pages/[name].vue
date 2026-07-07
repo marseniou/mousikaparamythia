@@ -62,12 +62,13 @@
 
 <script setup>
 import { useRoute } from "vue-router";
-import { tales } from "~/server/tales-data";
 import { onMounted, ref } from "vue";
 
 const route = useRoute();
 const name = route.params.name;
-const title = tales[name] || name.replace(/-/g, " ");
+const tales = useTales();
+const tale = tales.find(t => t.id === name);
+const title = tale ? tale.title : name.replace(/-/g, " ");
 
 const shapes = ref([]);
 
