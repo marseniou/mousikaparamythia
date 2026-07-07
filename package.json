@@ -2,7 +2,7 @@
   "name": "mousikaparamythia",
   "private": true,
   "scripts": {
-    "build": "sh build.sh",
+    "build": "nuxt generate",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "npx serve dist"
